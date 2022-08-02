@@ -2,7 +2,7 @@ package Baekjoon;
 
 import java.util.*;
 import java.io.*;
-//백준 1021번 회전하는 큐
+//백준 1302번 베스트셀러
 //해쉬맵에 같은값이 들어오면 밸류값+1씩증가 시켜서 넣음
 //밸류중에서 제일 큰값 찾아서 리턴
 
