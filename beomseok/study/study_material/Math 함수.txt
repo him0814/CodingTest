@@ -1,0 +1,17 @@
+Math.max(); 최댓값  Math.max(1,2) (두수비교, 삼항연산X), 삼항연상하려면(Math.max(1,Math.max(2,3)))
+
+Math.min(); 최소값
+
+Math.pow(2,2); 괄호안의 2의 제곱
+
+Math.pow(3,2); 괄호안의 3의 제곱(왼쪽 숫자, 오른쪽 지수) -> double 형
+
+Math.sqrt(); 괄호안의 값(루트) Math.sqrt(25) = 5 (무조건 double로 선언)
+
+Math.ceil(); 괄호안의 값 5.5 -> 6 소수점 첫째자리에서 올림 double로 선언
+
+Math.floor(); 괄호안의 값 5.5 -> 5 소수점 첫째자리에서 내림 double로 선언
+
+Math.round(); 괄호안의 값 5.5 -> 6 소수점 첫째자리에서 반올림 double로 선언
+
+Math.abs(); 괄호안의 값의 절대값 -> double로 선언
