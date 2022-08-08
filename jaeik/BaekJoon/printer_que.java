@@ -50,6 +50,6 @@ public class printer_que {
 			}
 			sb.append(count).append("\n");
 		}
-		System.out.println(sb);
+		System.out.print(sb);
 	}
 }
