@@ -41,7 +41,7 @@ public class Baekjoon_15666 {
 
 		answer = new int[N];
 		visit = new boolean[N];
-
+		
 		// 앞에 문제와 다르게 at을 0으로 넘겨줘야됨 왜 why? now배열의 index로 i가 들어가야되기때문
 		dfs(0, 0);
 		sb.setLength(sb.length() - 1);
