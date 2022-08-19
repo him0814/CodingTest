@@ -39,7 +39,7 @@ public class Baekjoon_15650 {
 
 		for (int i = at; i <= N; i++) {
 			arr[depth] = i;
-			System.out.println("depth : " + depth + " // arr[" +depth+"] : " + arr[depth]);
+//			System.out.println("depth : " + depth + " // arr[" +depth+"] : " + arr[depth]);
 			dfs(depth + 1, i+1);
 		}
 		

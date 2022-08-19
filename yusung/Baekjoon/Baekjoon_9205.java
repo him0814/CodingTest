@@ -11,27 +11,58 @@ import java.util.*;
 //각 테스트 케이스에 대해 갈수있으면 happy, 더 이동할 수 없으면 sad를 출력한다.
 
 public class Baekjoon_9205 {
-	
+
 	static int t; // 테스트케이스개수
 	static int n; // 편의점의 개수
 	static int[][] map;
-	static int home; // 상근이 집좌표?
-	static int gs; // 편의점 좌표?
-	static int rock; // 락페스티벌좌표?
 	
-	
-	public static void main(String[] args)throws IOException{
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		t = Integer.parseInt(br.readLine());
-		for(int i=0; i<t; i++) {
+
+		for (int i = 0; i < t; i++) {
 			n = Integer.parseInt(br.readLine());
-			map = new int[];
-			for(int j=0; j<4; j++) {
+			map = new int[n + 2][2];
+
+			for (int j = 0; j < n + 2; j++) {
 				StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-				
-				
+				map[j][0] = Integer.parseInt(st.nextToken());
+				map[j][1] = Integer.parseInt(st.nextToken());
+
+			}
+
+			if (bfs(0)) {
+				sb.append("happy" + "\n");
+			} else {
+				sb.append("sad" + "\n");
 			}
 		}
+		System.out.println(sb.toString());
 	}
 
+	public static boolean bfs(int x) {
+		Queue<Integer> q = new LinkedList<>();
+		boolean[] visit = new boolean[n + 2];
+
+		q.offer(x);
+		visit[x] = true;
+
+		while (!q.isEmpty()) {
+			int now = q.poll();
+
+			for (int i = 0; i < n + 2; i++) {
+				if (!visit[i]) {
+					if (Math.abs(map[now][0] - map[i][0]) + Math.abs(map[now][1] - map[i][1]) <= 1000) {
+						q.offer(i);
+						visit[i] = true;
+						if (i == n + 1) {
+							return true;
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
 }
