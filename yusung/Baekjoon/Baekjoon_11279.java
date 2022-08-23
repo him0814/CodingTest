@@ -27,6 +27,6 @@ public class Baekjoon_11279 {
 				pq.offer(num);
 			}
 		}		
-		System.out.println(sb.toString());
+		System.out.println(sb.toString());	
 	}
 }
