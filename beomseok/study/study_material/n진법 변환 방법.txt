@@ -1,0 +1,31 @@
+package BOJ;
+
+import java.util.;
+import java.io.;
+
+public class test1_BOJ {
+
+    public static void main(String[] args) throws IOException {
+
+        int num = 20;
+
+        // 10진법 -> n진법
+
+        System.out.println(" 10진법 -> n진법 ");
+        //2진법
+        System.out.println(Integer.toString(num, 2));
+        System.out.println(Integer.toString(num, 3));
+        System.out.println(Integer.toString(num, 5));
+        System.out.println(Integer.toString(num, 7));
+
+        String str = "1101";
+
+        // n진법 -> 10진법
+        System.out.println(" n진법 -> 10진법 ");
+        System.out.println(Integer.parseInt(str, 2));
+        System.out.println(Integer.parseInt(str, 3));
+        System.out.println(Integer.parseInt(str, 5));
+        System.out.println(Integer.parseInt(str, 7));
+
+    }
+}
