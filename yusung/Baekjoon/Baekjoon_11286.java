@@ -15,15 +15,15 @@ public class Baekjoon_11286 {
 			@Override
 			public int compare(Integer o1, Integer o2) {				
 				if(Math.abs(o1) > Math.abs(o2)) {
-					return 1;	// 바꿈(내림차순) 			
+					return 1;	// 바꿈 			
 				}else if(Math.abs(o1) < Math.abs(o2)) {
-					return -1; // 바꿈(오름차순) -> 그대로냅둔다
+					return -1; // 그대로냅둔다
 				}else {
 					if (o1 > o2) {
-						return 1; // 바꿈(내림차순)
+						return 1; // 바꿈
 					} 
 					else if (o1 < o2) {
-						return -1; 	// 바꿈(오름차순) -> 그대로 냅둔다
+						return -1; 	// 그대로 냅둔다
 					} 
 					else {
 						return 0; //바꾸지않음
