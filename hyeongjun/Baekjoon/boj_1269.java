@@ -29,15 +29,15 @@ public class boj_1269 {
 		for(int i = 0; i < a; i++) {
 			a_hs.add(Integer.parseInt(st.nextToken()));
 		}
-		
-		int count = 0;
-		
+				
 		st = new StringTokenizer(br.readLine(), " ");
 		
 		// b_hs에 2,3,4,5,6 추가
 		for(int i = 0; i < b; i++) {
 			b_hs.add(Integer.parseInt(st.nextToken()));
 		}
+		
+		int count = 0;
 		
 		for(int now: a_hs) {
 			// a_hs에 포함되지 않으면 count++
@@ -53,7 +53,7 @@ public class boj_1269 {
 			}
 		}
 		
-		System.out.println(count++);
+		System.out.println(count);
 		
 	}
 }

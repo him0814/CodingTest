@@ -25,7 +25,8 @@ public class boj_25192 {
 		for(int i = 0; i < test_cnt; i++) {
 			String str = br.readLine();
 			
-			// str == ENTER 은 왜 안되는지..
+			// String 값끼리 비교할 때는 equals 
+			// == 주소끼리 비교
 			if(str.equals("ENTER")) { // ENTER 입력시 set 초기화
 				count += hs.size();
 				hs = new HashSet<>();
