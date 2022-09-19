@@ -1,4 +1,4 @@
-package study1;
+package BOJ;
 
 /*
 백준 #10816 숫자카드2

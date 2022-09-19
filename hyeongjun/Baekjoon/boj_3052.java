@@ -1,4 +1,4 @@
-package study1;
+package BOJ;
 
 // 백준 #3052
 // 두 자연수 A,B가 있다

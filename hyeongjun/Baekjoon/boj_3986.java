@@ -1,4 +1,4 @@
-package study1;
+package BOJ;
 
 /*
 น้มุ #3986

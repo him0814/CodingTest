@@ -1,4 +1,4 @@
-package study1;
+package BOJ;
 
 // 백준 #2675
 // 문자열 S를 받은 후 각 문자를 R번 반복해 새로운 문자열 P를 만들어 출력

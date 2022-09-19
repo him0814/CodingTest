@@ -1,4 +1,4 @@
-package study1;
+package BOJ;
 
 // 백준 #1081
 // N개 정수 중 최솟값, 최댓값 구하기
