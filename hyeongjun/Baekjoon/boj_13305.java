@@ -43,10 +43,11 @@ public class boj_13305 {
 		
 		// long = int * int 안됨
 		// long = int * long      or        long = long * long
-//		long num = 1000000 * 1000000;
-//		long num1 = 1000000 * (long)1000000;
-//		
-//		System.out.println(num+" "+num1);
+		
+		//		long num = 1000000 * 1000000;
+		//		long num1 = 1000000 * (long)1000000;
+		//		
+		//		System.out.println(num+" "+num1);
 				
 		// 첫 번째 도시에선 무조건 첫 도로 길이만큼 주유해야함
 		long total = oil_price[0] * street[0]; // 10억x10억 = int (-21억~21억) 범위를 넘어감
