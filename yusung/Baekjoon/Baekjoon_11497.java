@@ -51,6 +51,24 @@ public class Baekjoon_11497 {
 					count++;
 				}				
 			}
+			
+//			int count = 0;
+//			int lcnt = 0;
+//			int rcnt = N-1;			
+//					
+//			while(count < answer.length) {
+//				if(lcnt < N/2) {
+//					answer[lcnt] = tree[count];	
+//					lcnt++;
+//					count++;					
+//				}
+//				if(rcnt >= N/2) {
+//					answer[rcnt] = tree[count];		
+//					rcnt--;
+//					count++;
+//				}
+//			}
+			
 			int max = Math.abs(answer[answer.length-1]-answer[0]); // max를 배열 인덱스의 0번과 마지막 인덱스를 뺸값의 절대값으로 초기화
 			for(int k=0; k<answer.length-1; k++) {//배열 인덱스 0 번부터 마지막인덱스 직전 즉 4/ 3번순회
 				max = Math.max(max,Math.abs(answer[k]-answer[k+1]));

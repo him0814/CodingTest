@@ -1,53 +1,34 @@
 package Baekjoon;
 
+//1초에 10억개의 데이터를 처리가능
+//시간제한 1초 -> 1초에 10억개의 데이터를 처리가능
+//N(1~1000) pi(1~1000)
+//정렬해서 누적합을 계속 누적해서 더해주면됨
+
 import java.io.*;
 import java.util.*;
 
 public class test {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		Stack<Integer> stack = new Stack<>();
-		StringBuilder sb = new StringBuilder();
 		int N = Integer.parseInt(br.readLine());
 		
+		int[] time = new int[N];
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+		
 		for(int i=0; i<N; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			String str = st.nextToken();
-			
-			if(str.equals("push")) {
-				int num = Integer.parseInt(st.nextToken());
-				stack.push(num);
-			}
-			else if(str.equals("pop")) {
-				if(stack.isEmpty()) {
-					sb.append(-1).append("\n");
-				}
-				else {					
-					sb.append(stack.pop()).append("\n");
-				}
-			}
-			else if(str.equals("size")) {
-				int size = stack.size();
-				sb.append(size).append("\n");
-			}
-			else if(str.equals("empty")) {
-				if(stack.size() == 0) {
-					sb.append(1).append("\n");
-				}
-				else {
-					sb.append(0).append("\n");
-				}
-			}
-			else if(str.equals("top")) {
-				if(stack.size() == 0) {
-					sb.append(-1).append("\n");
-				}
-				else {
-					sb.append(stack.peek()).append("\n");
-				}
-			}
+			time[i] = Integer.parseInt(st.nextToken());
 		}
-		sb.setLength(sb.length()-1);
-		System.out.println(sb.toString());
+		
+		Arrays.sort(time);
+		
+		int answer = 0;
+		int tmp =0;
+		
+		for(int i=0; i<N; i++) {
+			tmp += time[i];
+			answer += tmp;
+		}
+		System.out.println(answer);
 	}
 }
