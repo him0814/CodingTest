@@ -39,6 +39,7 @@ public class boj_11501 {
 			
 			int max = Integer.MIN_VALUE;
 			long profit = 0;
+			
 			for(int j = day - 1; j >= 0; j--) {
 				if(max < arr[j]) {
 					max = arr[j];

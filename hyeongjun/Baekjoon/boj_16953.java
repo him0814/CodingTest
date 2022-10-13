@@ -33,6 +33,7 @@ public class boj_16953 {
 				count = -1;
 				break;
 			}
+			
 			if(tmp % 2 == 0) { // 1. B를 2로 안 나누어 질 때 까지 나눈 후,
 				tmp /= 2;
 				count++;
@@ -40,7 +41,7 @@ public class boj_16953 {
 				tmp = tmp / 10;
 				count++;
 			} else {
-				count = -1; // 1인 경우
+				count = -1; // 3579
 				break;
 			}
 		}

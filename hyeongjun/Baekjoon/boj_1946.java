@@ -9,11 +9,11 @@ N <= 100,000
 	
 	k v
 	---
-	1 4   -> 서류순위가 1순위 이므로 무조건 선발
-	2 5
-	3 6
+	1 4  -> 서류순위가 1순위 이므로 무조건 선발
+	2 5 
+	3 6 
 	4 2
-	5 7
+	5 7 
 	6 1
 	7 3
 	
@@ -44,8 +44,8 @@ public class boj_1946 {
 				tm.put(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
 			}
 			
-			int min = Integer.MAX_VALUE;
-			int count = 0;
+			int min = tm.get(1);
+			int count = 1;
 			
 			// 3. 서류 순위 정렬이므로 서류 순위는 뒤쳐지므로 전 인덱스의 면접 순위보다 좋아야 선발됨
 			for(int j: tm.keySet()) {
