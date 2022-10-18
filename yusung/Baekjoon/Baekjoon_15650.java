@@ -36,10 +36,12 @@ public class Baekjoon_15650 {
 			sb.append("\n");
 			return;
 		}
-
+		
+		//at은 지금까지 뽑은 수 보다 작은수를 취급하지 않기위해서(오름차순으로 뽑기위해서)
+		// at이 1일때 다음 dfs는 2가 되고 -> for문이 2부터 돌기때문에 앞에서 본 1을 보지않음
 		for (int i = at; i <= N; i++) {
 			arr[depth] = i;
-//			System.out.println("depth : " + depth + " // arr[" +depth+"] : " + arr[depth]);
+			//System.out.println("depth : " + depth + " // arr[" +depth+"] : " + arr[depth]);
 			dfs(depth + 1, i+1);
 		}
 		

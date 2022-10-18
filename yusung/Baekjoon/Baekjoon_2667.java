@@ -9,11 +9,12 @@ public class Baekjoon_2667 {
 
 	private static int dx[] = { 0, 0, 1, -1 };
 	private static int dy[] = { 1, -1, 0, 0 };
-	private static int[] aparts = new int[25 * 25];
+	private static ArrayList<Integer> total = new ArrayList<>();
 	private static int n;
-	private static int apartNum = 0;
+	private static int count = 0;
 	private static boolean[][] visited = new boolean[25][25];
 	private static int[][] map = new int[25][25];
+	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args)throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -32,26 +33,23 @@ public class Baekjoon_2667 {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				if (map[i][j] == 1 && !visited[i][j]) {
-					apartNum++;
+					count=1;
 					dfs(i, j);
+					total.add(count);
 				}
 			}
 		}
 
-		Arrays.sort(aparts);
-		System.out.println(apartNum);
-
-		for (int i = 0; i < aparts.length; i++) {
-			if (aparts[i] == 0) {
-			} else {
-				System.out.println(aparts[i]);
-			}
+		Collections.sort(total);
+		sb.append(total.size()).append("\n");
+		for(int n : total) {
+			sb.append(n).append("\n");
 		}
+		System.out.println(sb.toString());		
 	}
 
 	private static void dfs(int x, int y) {
-		visited[x][y] = true;
-		aparts[apartNum]++;
+		visited[x][y] = true;		
 
 		for (int i = 0; i < 4; i++) {
 			int nx = x + dx[i];
@@ -60,6 +58,7 @@ public class Baekjoon_2667 {
 			if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
 				if (map[nx][ny] == 1 && !visited[nx][ny]) {
 					dfs(nx, ny);
+					count++;
 				}
 			}
 		}

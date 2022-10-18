@@ -1,34 +1,66 @@
 package Baekjoon;
 
-//1초에 10억개의 데이터를 처리가능
-//시간제한 1초 -> 1초에 10억개의 데이터를 처리가능
-//N(1~1000) pi(1~1000)
-//정렬해서 누적합을 계속 누적해서 더해주면됨
-
 import java.io.*;
 import java.util.*;
 
 public class test {
-	public static void main(String[] args) throws IOException{
+
+	static int dx[] = { 0, 0, 1, -1 };
+	static int dy[] = { 1, -1, 0, 0 };
+	static int n;
+	static int[][] apart;
+	static ArrayList<Integer> total = new ArrayList<>();
+	static boolean[][] visit;
+	static int count = 0;
+	static StringBuilder sb = new StringBuilder();
+
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int N = Integer.parseInt(br.readLine());
-		
-		int[] time = new int[N];
-		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-		
-		for(int i=0; i<N; i++) {
-			time[i] = Integer.parseInt(st.nextToken());
+		n = Integer.parseInt(br.readLine());
+
+		apart = new int[n][n];
+		visit = new boolean[n][n];
+
+		for (int i = 0; i < n; i++) {
+			String str = br.readLine();
+			for (int j = 0; j < n; j++) {
+				apart[i][j] = str.charAt(j) - '0';
+			}
+		}
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (apart[i][j] == 1 && !visit[i][j]) {
+					count = 1;
+					dfs(i, j);
+					total.add(count);
+				}
+			}
 		}
 		
-		Arrays.sort(time);
+		Collections.sort(total);
+		sb.append(total.size()).append("\n");
 		
-		int answer = 0;
-		int tmp =0;
-		
-		for(int i=0; i<N; i++) {
-			tmp += time[i];
-			answer += tmp;
+		for(int n : total) {
+			sb.append(n).append("\n");
 		}
-		System.out.println(answer);
+		System.out.println(sb.toString());
 	}
+
+	public static void dfs(int x, int y) {
+		visit[x][y] = true;
+
+		for (int i = 0; i < 4; i++) {
+			int nx = x + dx[i];
+			int ny = y + dy[i];
+
+			if (nx >= 0 && ny >= 0 && nx < n && ny < n) {
+				if(apart[nx][ny] == 1 && !visit[nx][ny]) {
+					dfs(nx, ny);
+					count++;
+				}
+			}
+		}
+	}
+
 }

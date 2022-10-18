@@ -46,6 +46,8 @@ public class Baekjoon_15649 {
 			if(!visit[i]) {
 				visit[i] = true;
 				arr[depth] = i+1;
+				// i가 0부터 시작하기 떄문에 i+1임
+				System.out.println("depth : " + depth + " // arr[" +depth+"] : " + arr[depth]);
 				dfs(depth+1);
 				visit[i] = false;
 			}
