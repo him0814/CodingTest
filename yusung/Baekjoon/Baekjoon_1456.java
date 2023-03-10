@@ -3,6 +3,8 @@ package Baekjoon;
 import java.io.*;
 import java.util.*;
 
+//백준 1456번 거의 소수
+
 public class Baekjoon_1456 {
 	static int max = 10000000;
 	static boolean[] bol = new boolean[max + 1];
@@ -40,8 +42,7 @@ public class Baekjoon_1456 {
 //			for(int j = i*i; j<bol.length; j+=i) {
 //				bol[j] = true;
 //			}
-//		}
-		
+//		}	
 		
 		for (int i = 2; i <= max; i++) {
 			bol[i] = true;// 전체 true로 초기화
