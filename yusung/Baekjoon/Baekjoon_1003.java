@@ -2,6 +2,8 @@ package Baekjoon;
 
 import java.io.*;
 
+//백준 1003번 피보나치함수
+
 public class Baekjoon_1003 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
