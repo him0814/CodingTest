@@ -41,7 +41,7 @@ public class ChessRePaint {
 		
 		int board = 64;
 		for (int i = 0; i < n - 7; i++) {
-			for (int j = 0; j < m - 7; j++) {
+			for (int j = 0; j < m - 7; j++) {    //경우의 수 = 2*(n-7)*(m-7)
 				int cnt_W = 0;
 				int cnt_B = 0;
 				for (int k = 0; k < 8; k++) {

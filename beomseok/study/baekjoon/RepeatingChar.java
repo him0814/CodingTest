@@ -16,6 +16,7 @@ import java.util.*;
 public class RepeatingChar {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		int t = Integer.parseInt(br.readLine()); //테스트케이스 입력
 		for(int i=0; i<t; i++) { //테스트케이스 횟수
 			StringTokenizer st = new StringTokenizer(br.readLine()," "); //공백 처리
@@ -23,11 +24,11 @@ public class RepeatingChar {
 			String s = st.nextToken(); //입력 문자열
 			for(int j=0; j < s.length(); j++) { //s의 길이만큼 반복
 				for(int k=0; k<r; k++) { // 문자열을 r만큼 반복  
-					System.out.print(s.charAt(j)); // 반복된 문자열을 한글자씩만 때와서 출력
+					sb.append(s.charAt(j)); // 반복된 문자열을 한글자씩만 때와서 붙임
 				}
 			}
-			System.out.println();
+			sb.append("\n");
 		}
+		System.out.println(sb);
 	}
-
 }

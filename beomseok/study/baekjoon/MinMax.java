@@ -20,7 +20,20 @@ public class MinMax {
 		}
 		
 		Arrays.sort(arr);
-		
 		System.out.println(arr[0] + " " +arr[n-1]);
+		
+//		int min = arr[0];
+//		int max = arr[0];
+//		
+//		for(int i=0; i<n; i++) {
+//			if(min > arr[i]) {
+//				min = arr[i];
+//			}
+//			if(max < arr[i]) {
+//				max = arr[i];
+//			}
+//		}
+//		
+//		System.out.println(min + " " + max);
 	}
 }

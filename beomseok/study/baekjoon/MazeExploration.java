@@ -28,7 +28,6 @@ public class MazeExploration {
 			}
 		}
 
-		visit[0][0] = true;
 		bfs(0, 0);
 		System.out.println(arr[n - 1][m - 1]);
 	}
@@ -36,6 +35,7 @@ public class MazeExploration {
 	public static void bfs(int x, int y) {
 		Queue<int[]> q = new LinkedList<>();
 		q.offer(new int[] { x, y });
+		visit[0][0] = true;
 
 		while (!q.isEmpty()) {
 			int now[] = q.poll();

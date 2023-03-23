@@ -1,5 +1,5 @@
 package baekjoon;
-
+//백준 1038 감소하는 수
 import java.io.*;
 import java.util.*;
 
